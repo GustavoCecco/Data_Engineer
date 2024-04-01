@@ -1,0 +1,13 @@
+# Projetos e Estudos - Data Engineer
+
+## Apresentação
+Repositório criado para disponibilizar projetos e estudos que tenho feito para engenharia de dados. Aqui você vai encontrar algumas das tecnologias utilizadas como Python, Docker, AWS, SQL, Linux.
+
+
+
+# Módulos e Projetos
+
+| Módulo/Projeto                             | Link          | Observação                                                                                        |
+|--------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
+| **Projeto I - ETL**                             | [Finalizado - Acesse Aqui](/Projeto%20I/README.md)        | **ETL em ambiente containerizado**: O objetivo deste projeto é a implementação de um pequeno Data Warehouse. Para isso, irei desenvolver através da linguagem Python um processo de ETL que extrai os dados existentes em arquivos no formato CSV e no banco de dados MongoDB e os persiste em um banco de dados Postgres seguindo modelagem dimensional.                                                                                                   |
+| **Projeto II - Consumo de API (TMDB)**                            | [Finalizado - Acesse Aqui](/Projeto%20II/README.MD)      | Esse desafio é relacionado com Filmes e Series. O objetivo é construir uma solução, de acordo com arquitetura que será apresentada, e elaborar uma análise envolvendo dados de APIs do The Movie Database (TMDB) e dos arquivos disponibilizados, relacionando-os.                                                                                                  |

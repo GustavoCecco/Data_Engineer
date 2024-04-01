@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: gustavo
+      POSTGRES_PASSWORD: gustavocecco
+      POSTGRES_DB: pb_dw
+    networks:
+      - networkpb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-init/init.js:/docker-entrypoint-initdb.d/init.js:ro
+    networks:
+      - networkpb
+
+  python_app:
+    build:
+      context: ./python_etl
+      dockerfile: /Dockerfile
+    depends_on:
+      - postgres
+      - mongodb
+    volumes:
+      - ./input:/app/input
+    networks:
+      - networkpb
+
+networks:
+  networkpb: 
