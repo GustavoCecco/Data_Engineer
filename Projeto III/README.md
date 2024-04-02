@@ -34,7 +34,7 @@ O conjunto de dados inclui itens como título do vídeo, canal, data de publica�
 
 Fazer o upload dos arquivos para o bucket S3 - Dados Brutos
     
-- Acesse os comandos utilizados para enviar os arquivos para o S3 [Aqui](/Projeto%20III/evidencias/comandos-CLI.sh)
+- Acesse os comandos utilizados para enviar os arquivos para o S3 [Aqui](/Projeto%20III/evidencias/comandos-CLI.txt)
 
 ![Bucket](/Projeto%20III/evidencias/bucket-raw-criado.png)
 ![Pastas](/Projeto%20III/evidencias/pastas.png)
@@ -42,19 +42,20 @@ Fazer o upload dos arquivos para o bucket S3 - Dados Brutos
 ![Pastas](/Projeto%20III/evidencias/pastas2_json.png)
 
 No Glue criamos um Crawler para mapear a pasta RAW com os arquivos 
-    - Adicionar permissão para que o GLue possa acessar os buckets S3 no IAM   
-    - Criar banco de dados para armazenar as tabelas com os dados brutos que serão mapeadas pelo crawler 
+
+- Adicionar permissão para que o GLue possa acessar os buckets S3 no IAM   
+- Criar banco de dados para armazenar as tabelas com os dados brutos que serão mapeadas pelo crawler 
 
 ![Database](/Projeto%20III/evidencias/database-raw.png)
 ![Dados](/Projeto%20III/evidencias/athena-dados-limpos.png)
 
 Para consultar os dados dessa tabela criada, usamos o AWS Athena
-    - Para usar o Athena devemos criar um local de saída para as consultas (salvar as consultas em um bucket S3)
+- Para usar o Athena devemos criar um local de saída para as consultas (salvar as consultas em um bucket S3)
 
 Criamos uma função Lambda para converter os arquivos Json em Parquet
-    - Criar função no IAM que de permissão para o lambda acessar o S3
-    - Criar outro bucket para armazenar os dados limpos (cleaned) 
-    - Executar a função lambda, os dados são limpos e convertidos em parquet
+- Criar função no IAM que de permissão para o lambda acessar o S3
+- Criar outro bucket para armazenar os dados limpos (cleaned) 
+- Executar a função lambda, os dados são limpos e convertidos em parquet
 
 ![Lambda](/Projeto%20III/evidencias/lambda-function.png)
 ![Variaveis](/Projeto%20III/evidencias/variaveis.png)
