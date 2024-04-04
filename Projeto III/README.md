@@ -61,5 +61,5 @@ Criamos uma função Lambda para converter os arquivos Json em Parquet
 ![Variaveis](/Projeto%20III/evidencias/variaveis.png)
 ![Função ok](/Projeto%20III/evidencias/função-ok.png)
 
-**Acesse o código da função Lambda [Aqui](/Projeto%20III/lambda-function.py)**
-**Acesse o código Pyspark [Aqui](/Projeto%20III/pyspark.py)**
+- **Acesse o código da função Lambda [Aqui](/Projeto%20III/lambda-function.py)**
+- **Acesse o código Pyspark [Aqui](/Projeto%20III/pyspark.py)**
