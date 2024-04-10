@@ -1,4 +1,4 @@
-# Weather API Project
+# Projeto - Weather API
 
 ## Arquitetura
 
@@ -30,10 +30,10 @@ O objetivo do projeto é criar um sistema de computação em nuvem na AWS que ex
 
 ### Criar a função lambda para salvar os dados da API no Dynamo com layer para requests
 
+**Acesse o código dessa função [Aqui](/Project_Weather_API/lambda_function.py)**
+
 ![Function 1](/Project_Weather_API/evidencias/function-weather-1.png)
 ![Layer](/Project_Weather_API/evidencias/layer-requests.png)
-
-**Acesse o código dessa função [Aqui](/Project_Weather_API/lambda_function.py)**
 
 ### Executar a função lambda
 
@@ -47,9 +47,9 @@ O objetivo do projeto é criar um sistema de computação em nuvem na AWS que ex
 ### Função lambda para pegar os dados do Dynamo e salvar no bucket s3 em CSV com layer para pandas
 A função converte os dados das tabelas do Dynamo em CSV para salvar no S3
 
-![Function 2](/Project_Weather_API/evidencias/function-weather-2.png)
-
 **Acesse o código dessa função [Aqui](/Project_Weather_API/lambda_dynamo_to_s3.py)**
+
+![Function 2](/Project_Weather_API/evidencias/function-weather-2.png)
 
 ### Criar Trigger de ativação Dynamo DB (Sempre que forem inseridos dados novos no Dynamo, automaticamente serão enviados para o bucket S3)
 
